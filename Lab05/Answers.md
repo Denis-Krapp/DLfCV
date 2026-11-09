@@ -1,0 +1,5 @@
+1. They compute the exact same mathematical objective. The only difference is execution mechanics: explicit Python nested loops versus batched matrix operations processed in parallel. Aside from negligible differences in floating-point roundoff due to summation order, their outputs must match.
+
+2. Each minibatch is a small random subset of the training dataset. The loss and gradients computed on a minibatch are stochastic approximations of the full-dataset values. This batch-to-batch sampling variance introduces noise into the gradient step, causing the observed loss to oscillate from iteration to iteration.
+
+3. L2 regularization explicitly adds a penalty proportional to the sum of squared weights to the total loss. In gradient descent, this introduces a weight decay term that pulls the weights toward zero at each update step. A higher regularization strength penalizes large weights more aggressively, driving the overall norm of W downward.

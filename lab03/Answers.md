@@ -1,0 +1,3 @@
+1. As k increased from 1 to 5, the decision boundary became smoother, less sensitive to individual outliers, and exhibited reduced overfitting.
+2. k = 5 typically performs better on the CIFAR-10 subset, as averaging over multiple neighbors reduces the impact of pixel-level noise.
+3. Tuning hyperparameters like k directly on the test set causes data leakage. The test set is meant strictly for evaluating final generalization performance on unseen data. Optimizing k on it leads to overfitting to that specific test set, producing an overly optimistic estimate of model performance.

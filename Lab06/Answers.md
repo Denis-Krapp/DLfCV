@@ -1,0 +1,6 @@
+1. The directional derivative of a function along a unit direction vector is given by the dot product of the gradient and that direction. By the properties of the dot product, this value is minimized when the direction points in the exact opposite direction of the gradient (cos theta = -1). Therefore, the negative gradient provides the direction of fastest local descent.
+
+2. A full batch evaluates the exact loss and gradient over the entire dataset at every step, creating a smooth and monotonic descent. In contrast, minibatches are small random samples, so each minibatch loss and gradient is a noisy, stochastic approximation of the true dataset values. Sample-to-sample variance causes the observed loss to oscillate from iteration to iteration.
+
+3. - Too small: Optimization progresses extremely slowly, risks getting trapped in plateau regions or suboptimal local points, and may fail to reach a good solution within the iteration budget.
+   - Too large: Steps overshoot the minimum, causing the loss to oscillate wildly, plateau at high values, or diverge entirely toward infinity.
